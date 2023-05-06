@@ -18,8 +18,4 @@ func FetchRepos(orgname string) ([]*github.Repository, error) {
 	options := &github.RepositoryListByOrgOptions{}
 	repos, _, err := client.Repositories.ListByOrg(context.Background(), orgname, options)
 	return repos, err
-	if err != nil {
-		return nil, err
-	}
-	return repos, nil
 }
